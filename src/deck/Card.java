@@ -10,21 +10,23 @@ package deck;
  * constructor que reciba como argumento el valor de dichos atributos.
  * */
 public class Card {
-	private int value;
-	private String suit;
+	private Value value;
+	private Suit suit;
 	/**
 	 * Constructor de la clase
 	 * Recibe 2 parámetros: value y suit y los asigna respectivamente
 	 * a sus atributos value y suit. Es una practica común en Java nombrar
 	 * los parámetros del constructor igual que los atributos que llenan
 	 * */
-	public Card (int value, String suit) {
+	public Card (Value value, Suit suit) {
+		this.value = value;
+		this.suit = suit;
 	}
-	public int getValue() {
-	 //devolver value
+	public Value getValue() {
+		return value;
 	}
-	public String getSuit() {
-	 //devolver suit
+	public Suit getSuit() {
+		return suit;
 	}
 	
 	
