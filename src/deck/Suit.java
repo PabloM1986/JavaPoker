@@ -1,19 +1,28 @@
 package deck;
 
+/**
+* Suits are from the typical french style
+* */
 public enum Suit {
-	SPADES('♠'), CLUBS('♣'), HEARTS('♡'), DIAMONDS('♢');
+	SPADES('♠', "Spades"), CLUBS('♣', "Clubs"), HEARTS('♡', "Hearts"), DIAMONDS('♢', "Diamonds");
 	
 	private char symbol;
+	private String value;
 	
-	private Suit(char symbol) {
+	Suit(char symbol, String value) {
 		this.symbol = symbol;
+		this.value = value;
 	}
 	
-	public char getValue() {
+	public char getSymbol() {
 		return this.symbol;
+	}
+
+	public String getValue() {
+		return this.value;
 	}
 	
 	public String toString() {
-		return Character.toString(symbol);
+		return value;
 	}
 }
